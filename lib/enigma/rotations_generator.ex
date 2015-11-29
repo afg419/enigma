@@ -24,4 +24,12 @@ defmodule RotationsGenerator do
   def generate(key,offset) do
     key |> reduce_key |> add(offset)
   end
+
+  def invert_generate(key, offset) do
+    generate(key, offset) |> invert
+  end
+
+  def invert({a,b,c,d}) do
+    {-a, -b, -c , -d}
+  end
 end

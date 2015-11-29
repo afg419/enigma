@@ -5,9 +5,9 @@ defmodule OffsetGenerator do
     c*10000 + b*100 + rem(a,100)
   end
 
-  def get_offset do
-    get_date |> process |> :math.pow(2) |> round |> extract
-  end
+  # def get_offset do
+  #   get_date |> process |> :math.pow(2) |> round |> extract
+  # end
 
   def get_offset(date) do
     date |> process |> :math.pow(2) |> round |> extract
@@ -24,6 +24,10 @@ defmodule OffsetGenerator do
   end
 
   def generate do
-    :erlang |> get_offset
+    get_offset(get_date)
+  end
+
+  def generate(date) do
+    get_offset(date)
   end
 end
