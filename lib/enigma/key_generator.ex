@@ -13,7 +13,6 @@ defmodule KeyGenerator do
     {a,b,c,d,e}
   end
 
-
   def generate(key) do
     generate
   end
