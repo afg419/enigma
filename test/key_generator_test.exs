@@ -1,4 +1,3 @@
-# Code.load_file("../enigma/lib/enigma/key_generator.ex")
 
 defmodule KeyGeneratorTest do
   use ExUnit.Case
@@ -28,5 +27,4 @@ defmodule KeyGeneratorTest do
     assert tuple_size(generate) == 5
     assert tuple_size(generate({1})) == 5
   end
-
 end

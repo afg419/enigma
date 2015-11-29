@@ -5,9 +5,8 @@ defmodule KeyGenerator do
   end
 
   def rand_digit do
-    :timer.sleep(1)
-    :random.seed(:erlang.now())
-    :random.uniform(9)
+    :random.seed(:os.timestamp)
+    Enum.random(1..9)
   end
 
   def generate({a,b,c,d,e}) when a*b*c*d*e != 0 do
