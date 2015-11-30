@@ -24,7 +24,8 @@ defmodule Cracker do
   end
 
   def rotation_types_of(string) do
-    String.codepoints(string)
+    string
+      |> String.codepoints
       |> Enum.with_index
       |> Enum.map(fn {char, index} -> {char , rem(index,4)} end)
   end
