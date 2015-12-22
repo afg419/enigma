@@ -1,6 +1,14 @@
 # Enigma
 
-**TODO: Add description**
+  An Elixir implementation of the German second world war ENIGMA crytographic system.  Contains encryption, decryption, and code crack capability for messages ending in '..end..'.  
+
+In iex:
+- `Cryptographer.encrypt(<message>)`
+returns encrypted message with randomly generated key.
+- `Cryptographer.decrypt(<encrypted message>, key)`
+returns deciphered message.
+- `Cryptographer.crack(<encrypted message>)`
+returns deciphered message if ending in '..end..'
 
 ## Installation
 
